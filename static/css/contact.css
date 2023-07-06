@@ -1,0 +1,25 @@
+
+.icons{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.box{
+    position: relative;
+    width: 260px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+.icons img{
+    width: 180px;
+    margin: 20px;
+}

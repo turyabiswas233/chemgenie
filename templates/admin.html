@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+  <a class="btn btn-outline-danger" href="/dropsession" role="button" style="margin-bottom:20px ;">Logout</a>
+
+  <form action="/abs-admin" method="POST" class="align-items-center">
+    <div class="mb-3 ">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="text" name="date" class="form-control" id="date">
+    </div>
+
+    <div class="mb-3">
+      <label for="schedule" class="form-label">Schedule</label>
+      <input type="text" name="schedule" class="form-control" id="schedule">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+<div class="card-container">
+{% for todo in allTodo %}
+  
+
+<div class="card">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <div class="content">
+      <h2>{{todo.title}}</h2><br>
+      <h3>Starting Date: {{todo.date}}</h3><br>
+      <p>Schedule: {{todo.schedule}}</p> 
+  </div>
+  <a href="/delete/{{todo.sno}}" type="button" >Delete
+  <a href="/update/{{todo.sno}}" type="button" >Update
+</div>
+
+  
+  
+{% endfor %}
+</div>
+
+{% endblock body %}

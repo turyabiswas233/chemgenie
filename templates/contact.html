@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <img class="w-100" src="{{ url_for('static', filename='img/contact-banner.jpg') }}" alt="">
+    <div class="icons">
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/gmail.jpg') }}" alt="">
+            <a href="mailto:afnanbinsiddique@gmail.com" target="_blank"><button class="btn btn-lg btn-outline-danger">Mail Us</button></a>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/loc.png') }}" alt="">
+            <a href=""><button class="btn btn-lg btn-outline-dark">Location</button></a>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/phn.png') }}" alt="">
+            <a href="tel:01839302299"><button class="btn btn-lg btn-outline-success">Dial</button></a>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='img/fb.png') }}" alt="">
+            <a href=""><button class="btn btn-lg btn-outline-primary">Facebook</button></a>
+            <p></p>
+        </div>
+    </div>
+</div>
+{% endblock body %}

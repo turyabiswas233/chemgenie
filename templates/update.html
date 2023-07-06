@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+  <form action="/update/{{todo.sno}}" method="POST" class="align-items-center">
+    <div class="mb-3 ">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" name="title" value="{{todo.title}}" class="form-control" id="title" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="text" name="date" value="{{todo.date}}" class="form-control" id="date">
+    </div>
+
+    <div class="mb-3">
+      <label for="schedule" class="form-label">Schedule</label>
+      <input type="text" name="schedule" value="{{todo.schedule}}" class="form-control" id="schedule">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+
+{% endblock body %}
