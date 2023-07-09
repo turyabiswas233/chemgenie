@@ -1,11 +1,9 @@
 {
-  "build": {
-    "use": "@vercel/python"
-  },
+  "build": { "src": "./main.py", "use": "@vercel/python" },
   "routes": [
     {
-      "src": "/(.html)",
-      "dest": "./templates/index.html"
+      "src": "/(.*)",
+      "dest": "main.py"
     }
   ]
 }
